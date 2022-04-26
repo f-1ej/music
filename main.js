@@ -6,7 +6,7 @@ import Vue from 'vue'
 Vue.config.productionTip = false
 //公共js
 import PubFuc from './common/js/util.js'
-vue.prototype.$pubFuc =  PubFuc
+Vue.prototype.$pubFuc = PubFuc
 
 
 App.mpType = 'app'
