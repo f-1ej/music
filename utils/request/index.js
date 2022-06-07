@@ -1,7 +1,7 @@
 import Request from './request.js'
 
 // need to change baseUrl
-const baseUrl = process.env.NODE_ENV === 'development' ? "https://www.fastmock.site/mock/848517155615356f2cbfc0d935619ba9/axios" : "http://localhost:8081/v1/api"
+const baseUrl = process.env.NODE_ENV === 'development' ? " http://192.168.0.109:3000" : "http://192.168.0.109:3000"
 
 const config = {
 	baseUrl: baseUrl

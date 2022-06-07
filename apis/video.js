@@ -1,9 +1,9 @@
 import request from '@/utils/request/index.js'
 
-export function test200(data) {
+export function apiGetNavList(data) {
 	return request.request({
-		url: '/get200',
-		method: 'POST',
+		url: '/related/allvideo',
+		method: 'GET',
 		data: data,
 		authType: 'None'
 	})
