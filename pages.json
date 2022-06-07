@@ -10,7 +10,10 @@
         "path" : "pages/account/account",
         "style" :  
         {
-            "navigationBarTitleText": "账号"
+            "navigationBarTitleText": "账号",
+						"app-plus": {
+						 "titleNView": false
+						}
         }
         
     }
@@ -26,14 +29,14 @@
             "style" : 
             {
                 "navigationBarTitleText": "我的"
+								// "titleNView": false
             }
-        }
-        ,{
-            "path" : "pages/clound/clound",
-            
-						"style":
-						{
-                "navigationBarTitleText": "云村"
+        },{
+            "path" : "pages/cloud/cloud",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "云村",
+								"titleNView": false
             }
             
         }
