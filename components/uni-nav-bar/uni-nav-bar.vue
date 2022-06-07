@@ -4,7 +4,11 @@
 		 class="uni-navbar__content">
 			<uni-status-bar v-if="statusBar" />
 			<view :style="{ color: color,backgroundColor: backgroundColor }" class="uni-navbar__header uni-navbar__content_view">
+
+				<view v-if="isShowLeft" @tap="onClickLeft" class="uni-navbar__header-btns uni-navbar__header-btns-left uni-navbar__content_view">
+
 				<view @tap="onClickLeft" class="uni-navbar__header-btns uni-navbar__header-btns-left uni-navbar__content_view">
+
 					<view class="uni-navbar__content_view" v-if="leftIcon.length">
 						<uni-icons :color="color" :type="leftIcon" size="24" />
 					</view>
@@ -37,7 +41,6 @@
 			<uni-status-bar v-if="statusBar" />
 			<view class="uni-navbar__placeholder-view" />
 		</view>
-		
 	</view>
 </template>
 
@@ -56,6 +59,12 @@
 				type: String,
 				default: ""
 			},
+
+			isShowLeft: {
+				type: [Boolean],
+				default: true
+			},
+
 			leftText: {
 				type: String,
 				default: ""
@@ -114,6 +123,7 @@
 </script>
 
 <style lang="scss" scoped>
+
 	ul {
 	    text-align: center;
 			background-color: #4CD964;
@@ -123,6 +133,7 @@
 		display: inline-block;
 		// height: 30px;
 	}
+
 	$nav-height: 44px;
 	.uni-nav-bar-text {
 		/* #ifdef APP-PLUS */

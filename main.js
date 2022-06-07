@@ -15,7 +15,8 @@ const app = new Vue({
 })
 app.$mount()
 // #endif
-
+Vue.prototype.$websiteUrl = 'http://localhost:3000';
+Vue.prototype.$imgSuffix = '?imageView&thumbnail=369x0&quality=75&tostatic=0';
 
 
 // #ifdef VUE3
