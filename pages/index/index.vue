@@ -1,3 +1,4 @@
+
 <template>
 	<view>
 		<view :class="{dpn: isShowSearch}">
@@ -502,3 +503,27 @@ page {
 }
 /* #endif */
 </style>
+=======
+<template>
+	<view>
+		
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+
+</style>
+

@@ -10,6 +10,14 @@
 				<view class="desc">{{item.name}}</view>
 				<view class="count">{{item.playCount}}</view>
 			</navigator>
+			<navigator v-if="link" :url="link" class="more fr">歌单广场</navigator>
+		</view>
+		<view class="clearfix">
+			<view class="item" v-for="(item, index) in list" :key="index">
+				<image class="img" :src="item.picUrl"></image>
+				<view class="desc">{{item.name}}</view>
+				<view class="count">{{item.playCount}}</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -84,9 +92,16 @@
 				border-radius: 10rpx;
 			}
 			.desc{
+
 				height:64rpx;
 				margin-top:12rpx;
 				line-height: 30rpx;
+
+				height:62rpx;
+				margin-top:12rpx;
+				line-height: 30rpx;
+				font-weight: 400;
+
 				overflow: hidden;
 			}
 			.count{

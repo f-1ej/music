@@ -19,7 +19,60 @@ const PubFuc = {
             return value;
         };
         return value.ToString("yyyy-MM-dd  hh:mm:ss");
-    }
+    },
+		setTabBarBadge (page) {
+			// 设置 store 红点信息
+			const accountMsg = store.state.message.account
+			const newMsg = store.state.message.newMsg || []
+			
+			newMsg[page] = 0
+			
+			const TempMsg = {
+				account: page == 4 ? 0 : accountMsg,
+				newMsg
+			}
+			store.commit('storeMessage', TempMsg)
+			
+			// 获取 store 红点信息
+			const accountMsgNew = store.state.message.account
+			const newMsgNew = store.state.message.newMsg || []
+			
+			if (accountMsgNew > 0) { // 如果有账号信息
+				setTimeout(() => {
+					// uni.setTabBarBadge 这个 API 在非tabbar页面上调用会失效。
+					uni.setTabBarBadge({   // 设置角标
+						index: 4,
+						text: String(accountMsgNew)
+					})
+				})
+			} else {
+				setTimeout(() => {
+					// 删除角标
+					uni.removeTabBarBadge({
+					   index: 0,
+					})
+				})
+			}
+			
+			newMsgNew.forEach((item, index) => {  // 设置红点
+				if (item > 0) {
+					uni.showTabBarRedDot({
+						index
+					})
+				} else {
+					uni.hideTabBarRedDot({
+						index
+					})
+				}
+			})
+		}
+		
+		
+		
+		
 }
 
 export default PubFuc
+
+// 设置角标
+

@@ -1,7 +1,11 @@
 import Request from './request.js'
 
 // need to change baseUrl
+
 const baseUrl = process.env.NODE_ENV === 'development' ? " http://192.168.0.109:3000" : "http://192.168.0.109:3000"
+
+const baseUrl = process.env.NODE_ENV === 'development' ? "http://localhost:3000" : "http://localhost:8081/v1/api"
+
 
 const config = {
 	baseUrl: baseUrl

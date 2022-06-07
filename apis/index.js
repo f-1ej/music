@@ -1,5 +1,6 @@
 import request from '@/utils/request/index.js'
 
+
 // 获取轮播图
 export function apiGetBanner(data) {
 	return request.request({
@@ -36,7 +37,6 @@ export function apiGetTopAlbum(data) {
 		authType: 'None'
 	})
 }
-
 export function apiGetRelatedVideo(data) {
 	return request.request({
 		url: '/related/allvideo',
@@ -71,3 +71,4 @@ export function apiSongDetail(data) {
 		data,
 	})
 }
+
