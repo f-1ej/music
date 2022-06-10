@@ -1,4 +1,5 @@
 <script>
+	import { mapMutations } from 'vuex';
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
@@ -12,7 +13,7 @@
 	}
 </script>
 
-<style>
-	/*每个页面公共css */
-	@import './common/css/common.scss';
+<style lang="scss">
+@import './common/css/common.scss';
+@import './common/css/iconfont.css';
 </style>

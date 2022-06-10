@@ -71,3 +71,12 @@ export function apiSongDetail(data) {
 		data,
 	})
 }
+
+// 获取歌曲链接
+export function apiSongUrl(data) {
+	return request.request({
+		url: '/song/url',
+		method: 'GET',
+		data,
+	})
+}

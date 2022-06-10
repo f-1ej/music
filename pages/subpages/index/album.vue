@@ -98,7 +98,6 @@ export default {
 				id
 			};
 			apiAlbumDetail(par).then(res => {
-				console.log(res)
 				res.playlist.description = res.playlist.description.slice(0, 27)
 				var list = res.playlist;
 				let tracks = res.playlist.tracks.map(song => {

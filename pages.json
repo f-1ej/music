@@ -1,6 +1,16 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+		  "path" : "pages/account/ad",
+		  "style" : {
+			  "navigationBarTitleText": "广告页",
+			  "navigationStyle": "custom",
+			  "app-plus":{
+			  	"titleNView": false
+			  }
+		  }
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "发现",
@@ -48,12 +58,12 @@
             
         }
     ],
-	// "globalStyle": {
-	// 	"navigationBarTextStyle": "white",     // 导航栏标题颜色及状态栏前景颜色，仅支持 black/white
-	//   "navigationBarTitleText": "Uniapp Music",   // 导航栏标题文字内容
-	// 	"navigationBarBackgroundColor": "#F8F8F8",  // 导航栏背景颜色（同状态栏背景色
-	// 	"backgroundColor": "#F8F8F8" // 窗口的背景色
-	// },
+	"globalStyle": {
+		"navigationBarTextStyle": "white",     // 导航栏标题颜色及状态栏前景颜色，仅支持 black/white
+	  "navigationBarTitleText": "Uniapp Music",   // 导航栏标题文字内容
+		"navigationBarBackgroundColor": "#F8F8F8",  // 导航栏背景颜色（同状态栏背景色
+		"backgroundColor": "#F8F8F8" // 窗口的背景色
+	},
 	"tabBar": {
 	    "color": "#888",
 	    "selectedColor": "#ff2419",
@@ -89,25 +99,37 @@
 	"subPackages": [
 		{
 			"root": "pages/subpages/index",  //分包根目录
-			 "pages": [{
+			"pages": [{
 			 		"path": "/album",  //配置页面路径
 					"style": {
 						"navigationBarTitleText": "歌单",
+						"navigationStyle": "custom",
 						"app-plus": {
 							"titleNView": false
 						}
-						
-					}
-			 	}    ,{
-                    "path" : "album",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-              
-              }
-            ]
+					} 
+			 	},
+				{
+				 	"path": "/login",  //配置页面路径
+					"style": {
+						"navigationBarTitleText": "登是录",
+						"navigationStyle": "custom",
+						"app-plus": {
+							"titleNView": false
+						}
+					} 
+			  },
+				{
+				 	"path": "/play",  //配置页面路径
+					"style": {
+						"navigationBarTitleText": "播放",
+						"navigationStyle": "custom",
+						"app-plus": {
+							"titleNView": false
+						}
+					} 
+				}
+      ]
 		}
 	]
 }
